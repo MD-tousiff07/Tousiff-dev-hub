@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Concepts Demo</title>
+
+  <style>
+    /* ----------- Background Image Example ----------- */
+    .banner {
+      width: 100%;
+      height: 250px;
+      background-image: url('https://picsum.photos/800/300'); /* random image */
+      background-size: cover;
+      background-position: center;
+      position: relative; /* parent for absolute children */
+    }
+
+    /* ---------- Position + Z-index Example ---------- */
+    .box1 {
+      width: 150px;
+      height: 150px;
+      background: rgba(0, 0, 255, 0.7);
+      position: absolute;   /* positioned inside banner */
+      top: 40px;
+      left: 40px;
+      z-index: 2;           /* appears on top */
+    }
+
+    .box2 {
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 0, 0, 0.7);
+      position: absolute;
+      top: 80px;
+      left: 80px;
+      z-index: 1;           /* appears behind box1 */
+    }
+
+    /* -------- Opacity + Transition + Hover (pseudo class) -------- */
+    .hover-card {
+      width: 200px;
+      height: 200px;
+      background: purple;
+      margin: 30px auto;
+      opacity: 0.7;                /* slightly transparent */
+      transition: all 0.5s ease;   /* smooth animation */
+    }
+
+    .hover-card:hover {
+      opacity: 1;                  /* full visibility on hover */
+      transform: scale(1.1);       /* zoom effect */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background image section -->
+  <div class="banner">
+    <div class="box1"></div> <!-- highest z-index -->
+    <div class="box2"></div> <!-- behind box1 -->
+  </div>
+
+  <!-- Transition + Opacity + Hover -->
+  <div class="hover-card"></div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EliteCollections — Luxury Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-mark" aria-hidden="true">
+          <!-- small gold mark -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2 L20 7 L16 20 L8 20 L4 7 Z" fill="#d4af37"/>
+          </svg>
+        </div>
+        <div class="logo-text">EliteCollections</div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main">
+        <a href="clothing.html">Clothing</a>
+        <a href="electronics.html">Electronics</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="admin.html" class="nav-admin">Admin</a>
+      </nav>
+
+      <div class="header-actions">
+        <input id="searchInput" class="search" type="search" placeholder="Search products..." />
+        <button id="wishlistBtn" class="icon-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21s-7-4.35-9-7.5C-0.5 7.5 5 3 12 7c7-4 12.5.5 9 6.5C19 16.65 12 21 12 21z" fill="#fff" opacity="0.9"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Curated Luxury<br/><span>for the modern connoisseur</span></h1>
+          <p>Discover premium Clothing, Electronics & Beauty — crafted to stand out.</p>
+          <div class="cta-row">
+            <a href="#categories" class="btn btn-primary">Shop Collections</a>
+            <a href="product.html" class="btn btn-ghost">View New Arrivals</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <!-- placeholder decorative card -->
+          <div class="card featured-card">
+            <img src="images/hero-sample.jpg" alt="Featured product" />
+            <div class="card-body">
+              <div class="card-title">Signature Leather Jacket</div>
+              <div class="card-price">₹12,499</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="categories container">
+      <h2 class="section-title">Explore Categories</h2>
+      <div class="category-grid" id="categoryGrid">
+        <!-- Category cards injected by JS -->
+      </div>
+    </section>
+
+    <section class="featured container">
+      <div class="featured-header">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="sort-area">
+          <select id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="low">Price: Low → High</option>
+            <option value="high">Price: High → Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Product cards injected by JS -->
+      </div>
+    </section>
+
+    <section class="about container">
+      <h3>About EliteCollections</h3>
+      <p>EliteCollections curates high-quality products across fashion, electronics and beauty with a refined aesthetic. Built with elegant UI and simple management for modern small businesses.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> EliteCollections — All rights reserved.</div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Twitter">TW</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

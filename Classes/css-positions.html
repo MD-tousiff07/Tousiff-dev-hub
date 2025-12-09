@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+    /* STATIC */
+    .static-box {
+      position: static; /* default */
+      background: lightblue;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* RELATIVE */
+    .relative-box {
+      position: relative;
+      top: 20px;   /* moves down */
+      left: 30px;  /* moves right */
+      background: lightgreen;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* ABSOLUTE */
+    .parent {
+      position: relative; /* important for absolute child */
+      width: 300px;
+      height: 200px;
+      background: #eee;
+      margin-bottom: 20px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: salmon;
+      padding: 15px;
+    }
+
+    /* FIXED */
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: gold;
+      padding: 15px;
+    }
+
+    /* STICKY */
+    .sticky-box {
+      position: sticky;
+      top: 0; /* sticks at the top when scroll reaches */
+      background: lightcoral;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="static-box">Static Position</div>
+
+  <div class="relative-box">Relative Position</div>
+
+  <div class="parent">
+    <div class="absolute-box">Absolute Position</div>
+  </div>
+
+  <div class="sticky-box">Sticky Position (scroll to see effect)</div>
+
+  <p style="height: 800px;">Scroll down...</p>
+
+  <div class="fixed-box">Fixed Position</div>
+
+</body>
+</html>
