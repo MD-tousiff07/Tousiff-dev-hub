@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Our Collection.com</title>
+  <title>Our Collection</title>
   <link rel="icon" type="image/png" href="favicon.png.png">
   <meta name="description" content="A simple e-commerce demo built with only HTML & CSS (no JavaScript)." />
   <style>
@@ -34,7 +34,7 @@
     .container{max-width:var(--max);margin:26px auto;padding:0 20px}
     header{display:flex;align-items:center;gap:20px;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#6610f2);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 6px 20px rgba(13,110,253,0.12)}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5f02f4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 6px 20px rgba(13,110,253,0.12)}
     .search{flex:1;margin-left:16px}
     .search input{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #e6e9ef;background:white}
 
@@ -84,7 +84,7 @@
     /* ----------------------
        PRODUCT QUICK VIEW (use :target)
        ---------------------- */
-    .modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(10,12,20,0.45);opacity:0;pointer-events:none;transition:opacity .2s}
+    .modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(163, 179, 243, 0.45);opacity:0;pointer-events:none;transition:opacity .2s}
     .modal:target{opacity:1;pointer-events:auto}
     .modal .card{background:white;border-radius:12px;max-width:900px;width:92%;display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:18px}
     .close{position:absolute;right:18px;top:18px;font-weight:800}
@@ -223,39 +223,20 @@
               <div class="flex"><span class="tag">premium</span><a href="" style="font-weight:700">Quick view</a></div>
             </div>
           </article>
+
+          <!-- Product 8 -->
+          <article class="product">
+            <a class="thumb" href="#pv-8"><img src="D:\Tousiff-dev-hub\preminum shirt.webp" alt="shirt" /></a>
+            <h3>preminum shirt</h3>
+            <div class="price-row">
+              <div class="price">₹2,599</div>
+              <div class="flex"><span class="tag">premium</span><a href="" style="font-weight:700">Quick view</a></div>
+            </div>
+          </article>
         </div>
       </section>
 
-      <!-- CSS cart panel (checkbox is earlier in header) -->
-      <div class="cart-panel" aria-hidden="false">
-        <h3>Your cart</h3>
-        <div class="cart-item">
-          <img src="D:\tousiff\RSL0564A_1.webp" alt="item" />
-          <div>
-            <div style="font-weight:800">Classic Sneaker</div>
-            <div class="muted">Size: 9 · Qty: 1</div>
-            <div style="margin-top:8px;font-weight:800">₹2,499</div>
-          </div>
-        </div>
-
-        <div class="cart-item">
-          <img src="D:\tousiff\backpack everyday.jpg" alt="item" />
-          <div>
-            <div style="font-weight:800">everyday backpack</div>
-            <div class="muted">Qty: 1</div>
-            <div style="margin-top:8px;font-weight:800">₹1,799</div>
-          </div>
-        </div>
-
-        <div class="cart-footer">
-          <div style="display:flex;justify-content:space-between;font-weight:800">Subtotal <span>₹4,298</span></div>
-          <div style="margin-top:10px;display:flex;gap:10px">
-            <label for="cart-toggle" class="btn btn-ghost" style="flex:1;text-align:center">Close</label>
-            <a class="btn btn-primary" href="#">Checkout</a>
-          </div>
-        </div>
-      </div>
-
+      
       <!-- PRODUCT QUICK-VIEW MODALS (pure CSS using fragment identifiers) -->
       <div id="pv-1" class="modal">
         <div class="card">
@@ -380,8 +361,32 @@
           </div>
           <div>
             <h3>preminum T-shirt</h3>
-            <p class="muted"> cool preminumT-shirt.</p>
+            <p class="muted">cool preminum T-shirt.</p>
             <div style="margin-top:12px;font-weight:800;font-size:18px">₹1,790</div>
+            <div style="margin-top:16px;display:flex;gap:10px">
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="#" class="btn btn-ghost">View product page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pv-8" class="modal">
+        <div class="card"><a class="close" href="#">✕</a>
+          <div>
+            <img src="D:\Tousiff-dev-hub\preminum shirt.webp" alt="shirt" />
+          </div>
+          <div>
+            <h3>preminum shirt</h3>
+            <p class="muted">preminum shirt.</p>
+            <div style="margin-top:12px;font-weight:800;font-size:18px">₹1,790</div>
+            <p style="margin-top:14px;color:var(--muted);font-size:14px">Select size</p>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <div class="tag">M</div>
+              <div class="tag">L</div>
+              <div class="tag">XL</div>
+              <div class="tag">XXL</div>
+            </div>
             <div style="margin-top:16px;display:flex;gap:10px">
               <a href="#" class="btn btn-primary">Add to cart</a>
               <a href="#" class="btn btn-ghost">View product page</a>
@@ -397,7 +402,7 @@
 
       <section id="contact" style="margin-top:18px">
         <h2>Contact</h2>
-        <p class="muted"> e-commerce site examlpe for more information contact to the blow number <h4>Call to :(8095844976).</h4></p>
+        <p class="muted"> e-commerce site examlpe for more information contact to the below number <h4>Call to :(8095844976).</h4></p>
       </section>
 
     </main>
